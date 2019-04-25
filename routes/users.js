@@ -8,6 +8,7 @@ const User = require('../models/User');
 
 // Login Page
 router.get('/login', (req, res) => res.render('login'));
+router.get('/xd', (req, res) => res.render('login'));
 
 // Register Page
 router.get('/register', (req, res) => res.render('register'));
@@ -98,3 +99,4 @@ router.get('/logout', (req, res) => {
     res.redirect('/users/login');
 })
 module.exports = router;
+

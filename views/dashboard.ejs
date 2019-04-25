@@ -1,3 +1,18 @@
-<h1 class="mt-4">Dashboard</h1>
-<p class="lead mb-3">Welcome <%= name %></p>
-<a href="/users/logout" class="btn btn-secondary">Logout</a>
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card p-5">
+            <p class="my-0 display-4 text-center">Welcome <%= name %>!</p>
+            <hr class="my-4" />
+            <p class="my-0" style="font-size: 20px; color: #546de5">Email</p>
+            <p class="mt-1 mb-4"><%= email %>.</p>
+            <p class="my-0" style="font-size: 20px; color: #546de5">Password (Hashed)</p>
+            <p class="mt-1 mb-4"><%= password %>.</p>
+            <p class="my-0" style="font-size: 20px; color: #546de5">User Created On</p>
+            <p class="mt-1 mb-0"><%= date %>.</p>
+            <hr class="my-4" />
+            <a href="/dashboard/update" class="btn btn-f btn-block mb-3">Update Account Details</a>
+            <a href="/" class="btn btn-t btn-block">Logout</a>
+
+        </div>
+    </div>
+</div>

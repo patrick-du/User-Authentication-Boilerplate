@@ -1,6 +1,9 @@
 <div class="row mt-5">
     <div class="col-md-6 m-auto">
         <div class="card p-5">
+            <a href="/" class="link mb-3">
+                <i class="fas fa-times hvr-grow" style='font-size: 30px; color: #e74c3c'></i>
+            </a>
             <p class="my-0 display-4 text-center">New User</p>
             <hr class="my-4" />
             <form action="/users/register" method="POST">
@@ -26,8 +29,8 @@
                     Register
                 </button>
             </form>
-            <p class="lead mt-3 text-center">Already have an account? <a class="link" style="color: #2980b9"
-                    href="/users/login">Login </a>
+            <p class="lead mt-3 text-center">Already have an account? <a class="link" style="color: #3498db"
+                    href="/users/login"><b>Login</b> </a>
             </p>
             <% include ./partials/messages %>
 
