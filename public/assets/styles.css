@@ -1,0 +1,70 @@
+.display-4 {
+    color: #2b2b2b;
+    font-size: 40px;
+
+}
+
+.btn-p {
+    background-color: #27ae60;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease-in-out
+}
+
+.btn-p:hover {
+    text-decoration: none;
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-s {
+    background-color: #2980b9;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease-in-out
+}
+
+.btn-s:hover {
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+}
+
+.card {
+    border-radius: 30px;
+}
+
+.form-control {
+    background-color: #eaf2f7;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover {
+    text-decoration: none;
+}
+
+.lead {
+    font-size: 17px;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
