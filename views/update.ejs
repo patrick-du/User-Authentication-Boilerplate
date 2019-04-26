@@ -1,33 +1,40 @@
 <div class="row mt-5">
     <div class="col-md-6 m-auto">
         <div class="card p-5">
-            <p class="my-0 display-4 text-center">Account Details</p>
+            <p class="my-0 display-4 text-center">Update Account Details</p>
             <hr class="my-4" />
-            <form action="/users/register" method="POST">
+            <form action="/dashboard/update" method="POST">
+
                 <div class="form-group ">
                     <p class="my-0" style="font-size: 20px; color: #546de5">Account Name</p>
-                    <input class="form-control" value="<%= name %>" disabled />
-                    <input type="name" id="newName" name="newName" class="form-control disabled hvr-grow" value="" />
+
+                    <input type="name" id="newName" name="newName" class="form-control hvr-grow"
+                        value="<%= typeof newName != 'undefined' ? newName : '' %>" />
                 </div>
+
 
                 <div class="form-group">
                     <p class="my-0" style="font-size: 20px; color: #546de5">Email</p>
-                    <input class="form-control" value="<%= email %>" disabled />
-                    <input type="email" id="newEmail" name="newEmail" class="form-control hvr-grow" value="" />
+                    <input type="email" id="newEmail" name="newEmail" class="form-control hvr-grow"
+                        value="<%= typeof newEmail != 'undefined' ? newEmail : '' %>" />
                 </div>
+
 
                 <div class="form-group">
-                    <p class="my-0" style="font-size: 20px; color: #546de5">Password(Hashed)</p>
-                    <input class="form-control" value="<%= password %>" disabled />
-                    <input type="password" id="newPassword" name="newPassword" class="form-control hvr-grow" value="" />
+                    <p class="my-0" style="font-size: 20px; color: #546de5">Password</p>
+                    <input type="password" id="newPassword" name="newPassword" class="form-control hvr-grow"
+                        value="<%= typeof newPassword != 'undefined' ? newPassword : '' %>" />
                 </div>
 
-                <hr class="my-4" />
 
+                <hr class="my-4" />
+                <button type="submit" class="btn btn-p btn-block mb-3">
+                    Save Changes
+                </button>
             </form>
 
-            <a href="/dashboard/update" class="btn btn-p btn-block mb-3">Save Changes</a>
-            <a href="/dashboard" class="btn btn-t btn-block">Back</a>
+            <a href="/dashboard" class="btn btn-t btn-block mb-3">Back</a>
+            <% include ./partials/messages %>
 
         </div>
     </div>
