@@ -1,4 +1,10 @@
 // Master file
+
+// User Authentication is a web & mobile boilerplate application for account registration, login, and updates. 
+// Developed this app for implementation in future projects and practice with Node JS (Express) and MongoDB.
+// Utilized Passport JS, an authentication middleware, and adopted local username and password authentication strategy
+// Stored accounts in MongoDB Atlas, a NoSQL database, and retrieved data through ad-hoc queries
+
 // Require modules --> express, ejs, mongoose, passport, flash, session, app
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
