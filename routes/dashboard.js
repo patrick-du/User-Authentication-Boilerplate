@@ -1,3 +1,7 @@
+// Deals with all dashboard-related logic
+// Includes updating user info
+
+
 // Require modules --> express, router, bcrypt, passport, config/auth
 const express = require('express');
 const router = express.Router();
@@ -80,6 +84,7 @@ router.post('/update', ensureAuthenticated, (req, res) => {
 
 })
 
+// Export router
 module.exports = router;
 
 

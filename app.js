@@ -1,3 +1,4 @@
+// Master file
 // Require modules --> express, ejs, mongoose, passport, flash, session, app
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
@@ -56,6 +57,7 @@ app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 app.use('/dashboard', require('./routes/dashboard'));
 
+// Set PORT to be passed into app.listen();
 const PORT = process.env.PORT || 5000;
 
 // Listen to PORT 5000 OR PORT ___ for hosting

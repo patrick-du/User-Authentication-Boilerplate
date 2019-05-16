@@ -1,3 +1,5 @@
+// Deals with all user-related logic 
+
 // Require modules --> express, router, bcrypt, passport
 
 const express = require('express');
@@ -10,7 +12,6 @@ const User = require('../models/User');
 
 // Login Page
 router.get('/login', (req, res) => res.render('login'));
-router.get('/xd', (req, res) => res.render('login'));
 
 // Register Page
 router.get('/register', (req, res) => res.render('register'));
@@ -103,5 +104,7 @@ router.get('/logout', (req, res) => {
     req.flash('sucess_msg', 'You are logged out');
     res.redirect('/users/login');
 })
+
+// Export router
 module.exports = router;
 
