@@ -1,3 +1,4 @@
+// Require modules --> express, ejs, mongoose, passport, flash, session, app
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
@@ -57,4 +58,5 @@ app.use('/dashboard', require('./routes/dashboard'));
 
 const PORT = process.env.PORT || 5000;
 
+// Listen to PORT 5000 OR PORT ___ for hosting
 app.listen(PORT, console.log(`Server started on port ${PORT}`));

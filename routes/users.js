@@ -1,3 +1,5 @@
+// Require modules --> express, router, bcrypt, passport
+
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
@@ -33,6 +35,7 @@ router.post('/register', (req, res) => {
         errors.push({ msg: 'Password should be at least 6 characters' });
     }
 
+    // If there are errors, re-render register page with errors
     if (errors.length > 0) {
         res.render('register', {
             errors,
@@ -43,6 +46,7 @@ router.post('/register', (req, res) => {
         });
     } else {
         // Validation passed
+        // Find user with the email entered in the form
         User.findOne({ email: email })
             .then(user => {
                 if (user) {
@@ -56,6 +60,7 @@ router.post('/register', (req, res) => {
                         password2
                     });
                 } else {
+                    // Create new user
                     const newUser = new User({
                         name,
                         email,

@@ -1,3 +1,4 @@
+// Require modules --> express, router, bcrypt, passport, config/auth
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
@@ -48,20 +49,23 @@ router.post('/update', ensureAuthenticated, (req, res) => {
         errors.push({ msg: 'Password should be at least 6 characters' });
     }
 
+    // If there are any errors, re-render with errors
     if (errors.length > 0) {
         res.render('update', {
             errors,
         })
     } else {
+        // Set data to be stored
         let newData = { name: newName, email: newEmail, password: newPassword };
 
-
+        // Hash password
         bcrypt.genSalt(10, (err, salt) => {
             bcrypt.hash(newData.password, salt, (err, hash) => {
                 if (err) throw err;
                 newData.password = hash;
                 console.log(newData.password);
 
+                // Record to MongoDB
                 User.updateOne({ email: oldEmail }, newData, (err, collection) => {
                     if (err) throw err;
                     console.log('Record updated successfully');
@@ -69,6 +73,7 @@ router.post('/update', ensureAuthenticated, (req, res) => {
             })
         })
 
+        // Flash success message and redirect to dashboard
         req.flash('success_msg', 'You have successfuly updated account details');
         res.redirect('/dashboard');
     }
